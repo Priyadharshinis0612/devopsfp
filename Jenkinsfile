@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git url: 'https://github.com/Priyadharshinis0612/devopsfp.git', credentialsId: '683aaea7-c17f-43b3-ba95-0cc123338553'
+                git branch: 'main', url: 'https://github.com/Priyadharshinis0612/devopsfp.git', credentialsId: '683aaea7-c17f-43b3-ba95-0cc123338553'
             }
         }
 
