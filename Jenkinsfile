@@ -18,7 +18,7 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-                withDockerRegistry([credentialsId: 'dockerhub-creds', url: '']) {
+                withDockerRegistry([credentialsId: 'dockerhub-creds', url: 'https://github.com/Priyadharshinis0612/devopsfp.git']) {
                     script {
                         dockerImage.push("latest")
                     }
