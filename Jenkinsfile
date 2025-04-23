@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'your-dockerhub-username/your-image-name'
+        IMAGE_NAME = 'priyadharshini06/devopsfp'
     }
 
     stages {
@@ -32,8 +32,8 @@ pipeline {
 
         stage('Deploy to Environment') {
             steps {
-                echo "Deployment step here"
-                // Example: sh 'docker run -d --name my-app ${IMAGE_NAME}'
+                echo "Deploying image: ${IMAGE_NAME}:latest"
+                // Example: sh 'docker run -d --name my-app ${IMAGE_NAME}:latest'
             }
         }
     }
