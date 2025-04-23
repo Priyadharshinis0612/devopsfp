@@ -3,5 +3,3 @@ FROM nginx:alpine
 
 # Copy your HTML file to the web server's default folder
 COPY index.html /usr/share/nginx/html/index.html
-RUN pip install -r requirements.txt
-CMD ["python", "app.py"]
