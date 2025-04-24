@@ -12,14 +12,7 @@ pipeline {
             }
         }
 
-        // 🔁 Replaced Build Docker Image stage here
         stage('Build Docker Image') {
-            agent {
-                docker {
-                    image 'docker:24.0.7' // Use Docker image with CLI tools
-                    args '-v /var/run/docker.sock:/var/run/docker.sock'
-                }
-            }
             steps {
                 script {
                     dockerImage = docker.build("${IMAGE_NAME}")
